@@ -4,4 +4,6 @@ title: About
 permalink: /about/
 ---
 
-Creator of Student 2025
+**Nolan (kinda) knows how to code.**
+I am 15 years old. I have 2 parents, 1 brother, and 1 dog.
+
