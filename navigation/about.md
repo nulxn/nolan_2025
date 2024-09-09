@@ -24,11 +24,17 @@ I am a student at Del Norte High School enrolled in AP CSE. I hope to advance my
         ],
         pets: {
             type: "dog",
-            name: "Stanley"
-            age: 0.44
+            name: "Stanley",
+            years: "0.44"
         }
     };
 
     console.log(person);
-    
+    person.interests.push("Sleepings");
+    console.log("Changed object: " + person);
+    console.log("Changed key" + person.interests);
+    console.log(person.years / 7);
+    console.log(typeof person.name);
+    console.log(typeof person.age);
+    console.log(typeof person.pets);
 </script>

@@ -38,8 +38,6 @@ background-image: url('{{sprite_file}}');
 background-repeat: no-repeat;
 }
 
-/_background position of sprite element
-_/
 #mario {
 background-position: calc({{animations[0].col}} _ {{pixels}} _ -1px) calc({{animations[0].row}} _ {{pixels}}_ -1px);
 }
@@ -195,13 +193,13 @@ background-position: calc({{animations[0].col}} _ {{pixels}} _ -1px) calc({{anim
 
 ## Nolan does coding
 
-i will change the colors and stuff of this website later. i'm too lazy to rn
+| [Javascript Cell](posts/js) | [About](about) | [Python Hacks](posts/py-hacks) | [Attempted vs Accomplishment](posts/what) |
 
 <div>
   <button>i do nothing!</button>
 </div>
 <div>
-<a href="firstdays/">first days</a>
+<button><a href="firstdays/">first days</a></button>
 <br />
-<a href="about/">about</a>
+<button><a href="about/">about</a></button>
 </div>
