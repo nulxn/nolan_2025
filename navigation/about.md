@@ -5,36 +5,25 @@ permalink: /about/
 ---
 
 **Nolan (kinda) knows how to code.**
-I am a student at Del Norte High School enrolled in AP CSE. I hope to advance my knowledge of coding and work enviornments.
 
-<script>
-    var person = {
-        name: "Nolan Hightower",
-        age: 14,
-        classes: [
-            "Integrated Math 3a",
-            "Spanish 4",
-            "Digital Photography 2",
-            "AP World",
-            "AP CSP"
-        ],
-        interests: [
-            "Coding",
-            "Running"
-        ],
-        pets: {
-            type: "dog",
-            name: "Stanley",
-            years: "0.44"
-        }
-    };
+- Born: December 2008, San Diego
+- Lives in: 4S Ranch, San Diego
 
-    console.log(person);
-    person.interests.push("Sleepings");
-    console.log("Changed object: " + person);
-    console.log("Changed key" + person.interests);
-    console.log(person.years / 7);
-    console.log(typeof person.name);
-    console.log(typeof person.age);
-    console.log(typeof person.pets);
-</script>
+Interests:
+
+- NodeJS
+- Running (XC & Track)
+- APIs & Problem Solving
+
+Cool things I've done:
+
+- I've gone on a road trip for a year around the US (I've been to all the states except Alaska)
+- I made a Duolingo API wrapper (for NodeJS 💪)
+
+Things I have yet to do:
+
+- Figure out the theme switcher for Jekyll
+- Figure out Jeykyll
+
+**MAP OF MY YEAR LONG TRIP:**
+<img src="../images/map.jpg" alt="tripmap">

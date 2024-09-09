@@ -1,16 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-{% if site.remote_theme contains 'minima' %}
-  {%- include theme/minima/base.html -%}
-{% elsif site.remote_theme contains 'midnight' %}
-  {%- include theme/midnight/base.html -%}
-{% elsif site.remote_theme contains 'dinky' %}
-  {%- include theme/dinky/base.html -%}
-{% elsif site.remote_theme contains 'time-machine' %}
-  {%- include theme/time-machine/base.html -%}
-{% elsif site.remote_theme contains 'cayman' %}
-  {%- include theme/cayman/base.html -%}
-{% endif %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  {% if site.remote_theme contains 'minima' %}
+    {%- include theme/minima/base.html -%}
+  {% elsif site.remote_theme contains 'midnight' %}
+    {%- include theme/midnight/base.html -%}
+  {% elsif site.remote_theme contains 'dinky' %}
+    {%- include theme/dinky/base.html -%}
+  {% elsif site.remote_theme contains 'time-machine' %}
+    {%- include theme/time-machine/base.html -%}
+  {% elsif site.remote_theme contains 'cayman' %}
+    {%- include theme/cayman/base.html -%}
+  {% endif %}
+</head>
+
 </html>

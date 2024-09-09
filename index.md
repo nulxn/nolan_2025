@@ -1,8 +1,8 @@
 ---
 layout: base
-title: Course Descriptions
-description: An overview of Computer Science pathway at Del Norte High School
-author: John Mortensen, Vivian Ni, Bria Gilliam
+title: Nolan's Portfolio
+description: Nolan's main webpage
+author: Nolan Hightower
 image: /images/mario_animation.png
 hide: true
 ---
@@ -193,13 +193,33 @@ background-position: calc({{animations[0].col}} _ {{pixels}} _ -1px) calc({{anim
 
 ## Nolan does coding
 
+<img src="images/image.png" alt="This is an image">
+
 | [Javascript Cell](posts/js) | [About](about) | [Python Hacks](posts/py-hacks) | [Attempted vs Accomplishment](posts/what) |
 
 <div>
-  <button>i do nothing!</button>
+  <button onclick="swapTheStuff()">swap the links</button>
 </div>
 <div>
-<button><a href="firstdays/">first days</a></button>
+<button id="btn1"><a href="firstdays/">first days</a></button>
 <br />
-<button><a href="about/">about</a></button>
+<button id="btn2"><a href="about/">about</a></button>
 </div>
+<script>
+function swapTheStuff() {
+var btn1 = document.getElementById('btn1');
+var btn2 = document.getElementById('btn2');
+var link1 = 'firstdays/';
+var link2 = 'about/';
+function getCode(li, na){
+  return `<a href="${li}">${na}</a>`;
+}
+if(btn1.innerHTML === getCode(link1, "first days")) {
+  btn1.innerHTML = getCode(link2, "about");
+  btn2.innerHTML = getCode(link1, "first days");
+} else {
+    btn2.innerHTML = getCode(link2, "about");
+    btn1.innerHTML = getCode(link1, "first days");
+}
+}
+</script>

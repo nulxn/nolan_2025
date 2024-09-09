@@ -1,24 +1,28 @@
-title: Nighthawk Pages 
+title: Nighthawk Pages
 description: "Class of 2025"
 owner_name: Nolan Hightower
 github_username: nulxn
-github_repo: "nolan_2025" 
+github_repo: "nolan_2025"
 baseurl: "/nolan_2025"
 future: true
-# remote_theme: jekyll/minima
+
+# Uncomment the remote_theme line for the desired theme
+#remote_theme: pages-themes/cayman@v0.2.0
+remote_theme: jekyll/minima
+
 minima:
   skin: dark
   social_links:
-    - { platform: github, user_url: "https://github.com/nighthawkcoders"}
+    - { platform: github, user_url: "https://github.com/nighthawkcoders" }
     - { platform: x, user_url: "https://x.com/NighthawkCoding/" }
-    - { platform: youtube, user_url: "https://www.youtube.com/@nighthawkcodingsociety2868" } 
-# remote_theme: pages-themes/midnight@v0.2.0
-# remote_theme: pages-themes/cayman@v0.2.0
-# remote_theme: pages-themes/dinky@v0.2.0
-# remote_theme: pages-themes/minimal@v0.2.0
-remote_theme: pages-themes/time-machine@v0.2.0
+    - {
+        platform: youtube,
+        user_url: "https://www.youtube.com/@nighthawkcodingsociety2868",
+      }
+
 plugins:
   - jekyll-remote-theme
+
 header_pages:
   - navigation/blog.md
   - navigation/search.md
