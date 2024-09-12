@@ -198,7 +198,7 @@ background-position: calc({{animations[0].col}} _ {{pixels}} _ -1px) calc({{anim
 | [Javascript Cell](posts/js) | [About](about) | [Python Hacks](posts/py-hacks) | [Attempted vs Accomplishment](posts/what) |
 
 <div>
-  <button onclick="swapTheStuff()">swap the links</button>
+  <button style='color:var("--dark-poole-link-color");' onclick="swapTheStuff()">swap the links</button>
 </div>
 <div>
 <button id="btn1"><a href="firstdays/">first days</a></button>
