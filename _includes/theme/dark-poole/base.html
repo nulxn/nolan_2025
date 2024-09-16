@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>
       {% if page.title == "Home" %} {{ site.title }}{% if site.tagline %}
       &middot; {{ site.tagline }}{% endif %} {% else %} {{ page.title }}
@@ -20,16 +19,15 @@
       <header class="masthead">
         <h3 class="masthead-title">
           <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-
           <nav class="nav">
             {%- assign page_paths = site.header_pages | default: default_paths
             -%} {%- for path in page_paths -%} {%- assign my_page = site.pages |
             where: "path", path | first -%} {%- if my_page.title -%}
-            <small
-              ><a href="{{ my_page.url | relative_url }}"
+            <small>
+              <a href="{{ my_page.url | relative_url }}"
                 >{{ my_page.title | escape }}</a
-              ></small
-            >
+              >
+            </small>
             {%- endif -%} {%- endfor -%}
           </nav>
         </h3>
@@ -38,13 +36,78 @@
       <main>{{ content }}</main>
 
       <footer class="footer">
-        <small>
-          &copy;
-          <time datetime="{{ site.time | date_to_xmlschema }}"
-            >{{ site.time | date: '%Y' }}</time
-          >. All rights reserved.
-        </small>
+        <div class="footer-content">
+          <small class="footer-bottom-text">
+            &copy;
+            <time datetime="{{ site.time | date_to_xmlschema }}">
+              {{ site.time | date: '%Y' }}
+            </time>
+            . All rights reserved.
+          </small>
+          <ul class="footer-links">
+            {%- assign page_paths = site.header_pages | default: default_paths
+            -%} {%- for path in page_paths -%} {%- assign my_page = site.pages |
+            where: "path", path | first -%} {%- if my_page.title -%}
+            <li>
+              <a href="{{ my_page.url | relative_url }}" class="footer-link">
+                {{ my_page.title }}
+              </a>
+            </li>
+            {%- endif -%} {%- endfor -%}
+          </ul>
+        </div>
       </footer>
     </div>
+
+    <style>
+      .footer {
+        padding-top: 6rem;
+        padding-bottom: 1.5rem;
+        background-color: var(--dark-poole-001);
+        border-top: 1px solid var(--dark-poole-002);
+      }
+
+      .footer-content {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .footer-bottom-text {
+        display: block;
+        font-size: 0.875rem;
+        color: var(--dark-poole-002);
+        font-weight: 600;
+        padding: 0.5rem 0;
+        text-align: center;
+      }
+
+      .footer-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-link {
+        color: var(--dark-poole-link-color);
+        text-decoration: none;
+        transition: color 0.3s, background-color 0.3s;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+      }
+
+      .footer-link:hover {
+        color: var(--dark-poole-link-hover);
+        background-color: var(--gray-700);
+      }
+    </style>
   </body>
 </html>

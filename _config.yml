@@ -1,4 +1,4 @@
-title: Nighthawk Pages
+title: Nolan's Blog
 description: "Class of 2025"
 owner_name: Nolan Hightower
 github_username: nulxn
@@ -29,5 +29,5 @@ header_pages:
   - navigation/blog.md
   - navigation/search.md
   - navigation/about.md
-  - navigation/firstdays.md
+  - navigation/gallery.md
   - README4YML.md

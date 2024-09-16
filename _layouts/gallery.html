@@ -1,0 +1,64 @@
+---
+layout: base
+---
+
+<div class="gallery">
+  {% for image in site.data.gallery %}
+  <div class="gallery-item">
+    <img src="{{ image.url }}" alt="{{ image.alt }}" />
+    <div class="overlay">
+      <p>{{ image.caption }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<style>
+  .gallery {
+    column-count: 3;
+    column-gap: 1em;
+  }
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 1em;
+    position: relative;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .gallery-item:hover .overlay {
+    opacity: 1;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    galleryItems.forEach((item) => {
+      item.addEventListener("click", function () {
+        const overlay = this.querySelector("img");
+        if (overlay) {
+          window.open(overlay.getAttribute("src"), "_blank");
+        }
+      });
+    });
+  });
+</script>
