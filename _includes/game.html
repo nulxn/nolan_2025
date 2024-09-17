@@ -1,0 +1,31 @@
+<iframe
+  src="{{ '/games/snake.html' || relative_url }}"
+  id="gameFrame"
+  style="width: 500px; height: 500px; border: none"
+  scrolling="no"
+></iframe>
+<div id="otio">
+  <button
+    id="stopButton"
+    onclick="window.parent.postMessage({ action: 'enableScrolling' }, '*');"
+  >
+    unlock scrolling
+  </button>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("message", function (event) {
+      console.log("message recieved");
+      if (event.data.action === "disableScrolling") {
+        document.body.style.overflow = "hidden";
+      } else if (event.data.action === "enableScrolling") {
+        document.body.style.overflow = "auto";
+      }
+    });
+
+    var gameFrame = document.getElementById("gameFrame");
+    gameFrame.addEventListener("blur", function () {
+      document.body.style.overflow = "auto";
+    });
+  });
+</script>

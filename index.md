@@ -207,6 +207,9 @@ background-position: calc({{animations[0].col}} _ {{pixels}} _ -1px) calc({{anim
 <br />
 <button id="btn2"><a href="about/">about</a></button>
 </div>
+
+{% include game.html %}
+
 <script>
 function swapTheStuff() {
 var btn1 = document.getElementById('btn1');
