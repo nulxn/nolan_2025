@@ -3,11 +3,10 @@ layout: base
 ---
 
 <article class="post">
-
   <h2 class="post-title">{{ page.title | escape }}</h2>
- 
-  <div class="post-content">
-    {{ content }}
-  </div>
 
+  <div class="post-content">{{ content }}</div>
+
+  {%- if page.comments -%} {%- include utterances.html -%} {%- endif -%} {%- if
+  site.disqus.shortname -%} {%- include disqus_comments.html -%} {%- endif -%}
 </article>
