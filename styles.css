@@ -197,7 +197,6 @@ footer {
   height: 250px;
   max-width: 100% !important;
   position: relative;
-  background-image: url("images/waterfall.gif");
   background-size: cover;
   background-position: center;
   padding-left: var(--spacer-2);
@@ -229,7 +228,6 @@ footer {
 
 .masthead {
   position: relative;
-  background-image: url("images/beach.gif");
   background-size: cover;
   background-position: center;
   padding-top: var(--spacer);
