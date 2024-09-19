@@ -191,13 +191,28 @@ background-position: calc({{animations[0].col}} _ {{pixels}} _ -1px) calc({{anim
 
 </script>
 
-## Nolan does coding
-
 [**BRAINROT**](skibidbiden)
 
-<img src="images/image.png" alt="This is an image">
+**MY FIRST DAYS PAGE IS ON THE BUTTONS**
+
+### Nolan's Notes {#nolannotes}
+
+1. I didn't do all the hacks in order, so the links to them are scattered around.
+2. I imported my own theme from another Jekyll website (andrewhwanpark/dark-poole) and made changes to certain things, including the footer and navbar GIFs.
+3. Please don't judge my photography since I just imported all my photos from Lightroom.
+
+### HTML Hacks (Image + Table\[submenu\])
+
+<img src="images/image.gif" alt="This is an image">
 
 | [Javascript Cell](posts/js) | [About](about) | [Python Hacks](posts/py-hacks) | [Attempted vs Accomplishment](posts/what) |
+
+### (Some) Javascript Hacks
+
+[ITunes API + JS/HTML Output](posts/itunes)
+[Calculator](calculator)
+
+I put my Javascript cell (my person object) in the table below.
 
 <div>
   <button style='color:white;' onclick="swapTheStuff()">swap the links</button>
@@ -207,6 +222,10 @@ background-position: calc({{animations[0].col}} _ {{pixels}} _ -1px) calc({{anim
 <br />
 <button id="btn2"><a href="about/">about</a></button>
 </div>
+
+As for if getting Google Snake is considered being lazy, I would like to note that Google has the site disabled for IFrame so I couldn't just add it to my site. I instead got the code and added it to a new folder called games/ and added a game.html (expansion wip, this means u can choose dif games based on way of import) so I can add it to any site I want. I also made it so using the arrow keys doesn't move the site up in down by comminicating to the parent site with JS and eventListeners.
+
+This took probably more problem solving and critical thinking that just copying the snake code that you provided, but idk 🤷
 
 {% include game.html %}
 

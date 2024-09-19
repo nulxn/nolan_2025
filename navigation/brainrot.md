@@ -14,10 +14,12 @@ permalink: skibidbiden
     Browser is bad (vid)
 </video>
 
+<video id="videoPlayer2" controls width="600"><source src="assets/Video-144.mp4" type="video/mp4"></video>
+
 <script>
 document.addEventListener('DOMContentLoaded', (event) => {
    const videoPlayer = document.getElementById('videoPlayer');
-
+   const videoPlayer2 = document.getELementById('videoPlayer2')
    const audioPlayer = document.getElementById('audioPlayer');
 
    audioPlayer.play().catch(error => {
@@ -28,6 +30,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
    });
 
    videoPlayer.addEventListener('ended', () => {
+      console.log('Video has ended.');
+   });
+      videoPlayer2.play().catch(error => {
+      console.log('Error playing video:', error);
+   });
+
+   videoPlayer2.addEventListener('ended', () => {
       console.log('Video has ended.');
    });
 });

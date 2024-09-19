@@ -33,31 +33,35 @@
         </h3>
       </header>
 
-      <main>{{ content }}</main>
-
-      <footer class="footer">
-        <div class="footer-content">
-          <small class="footer-bottom-text">
-            &copy;
-            <time datetime="{{ site.time | date_to_xmlschema }}">
-              {{ site.time | date: '%Y' }}
-            </time>
-            . All rights reserved.
-          </small>
-          <ul class="footer-links">
-            {%- assign page_paths = site.header_pages | default: default_paths
-            -%} {%- for path in page_paths -%} {%- assign my_page = site.pages |
-            where: "path", path | first -%} {%- if my_page.title -%}
-            <li>
-              <a href="{{ my_page.url | relative_url }}" class="footer-link">
-                {{ my_page.title }}
-              </a>
-            </li>
-            {%- endif -%} {%- endfor -%}
-          </ul>
-        </div>
-      </footer>
+      <main>
+        {% if page.title == "Nolan's Portfolio" %}{% include toc.html
+        html=content sanitize=true class="inline_toc" id="my_toc" h_min=2
+        h_max=3%}{% endif %} {{ content }}
+      </main>
     </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <small class="footer-bottom-text">
+          &copy;
+          <time datetime="{{ site.time | date_to_xmlschema }}">
+            {{ site.time | date: '%Y' }}
+          </time>
+          . All rights reserved.
+        </small>
+        <ul class="footer-links">
+          {%- assign page_paths = site.header_pages | default: default_paths -%}
+          {%- for path in page_paths -%} {%- assign my_page = site.pages |
+          where: "path", path | first -%} {%- if my_page.title -%}
+          <li>
+            <a href="{{ my_page.url | relative_url }}" class="footer-link">
+              {{ my_page.title }}
+            </a>
+          </li>
+          {%- endif -%} {%- endfor -%}
+        </ul>
+      </div>
+    </footer>
 
     <style>
       .footer-links {
