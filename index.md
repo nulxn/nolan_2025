@@ -195,7 +195,7 @@ background-position: calc({{animations[0].col}} _ {{pixels}} _ -1px) calc({{anim
 
 **MY FIRST DAYS PAGE IS ON THE BUTTONS**
 
-### Nolan's Notes {#nolannotes}
+### Nolan's Notes
 
 1. I didn't do all the hacks in order, so the links to them are scattered around.
 2. I imported my own theme from another Jekyll website (andrewhwanpark/dark-poole) and made changes to certain things, including the footer and navbar GIFs.
