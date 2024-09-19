@@ -211,8 +211,8 @@ background-position: calc({{animations[0].col}} _ {{pixels}} _ -1px) calc({{anim
 
 ## (Some) Javascript Hacks
 
-* [ITunes API + JS/HTML Output](posts/itunes)
-* [Calculator](calculator)
+- [ITunes API + JS/HTML Output](posts/itunes)
+- [Calculator](calculator)
 
 I put my Javascript cell (my person object) in the table below.
 
@@ -234,12 +234,13 @@ This took probably more problem solving and critical thinking that just copying 
 ### Mr Brown Clicker
 
 <div>
-   <img id="mrbrown" alt="mrbown" width="500px" height="500px" src="images/map.jpg">
-   <p id="score">Score: Click to start!</p>
+   <img id="mrbrown" alt="mrbown" width="500px" height="500px" src="images/brown/stat.jpg">
+   <p id="score">Mr. Brownies Collected: Click to start!</p>
+    <audio id="clickSound" src="images/brown/sound.mp3" preload="auto"></audio>
 </div>
 <script>
-   const msg = "Score: ";
-   const stationary = "images/map.jpg";
+   const msg = "Mr. Brownies Collected: ";
+   const stationary = "images/brown/stat.jpg";
    const img1 = "images/brown/1.jpg";
    const img2 = "images/brown/2.jpg";
    const scoreElement = document.getElementById("score");
