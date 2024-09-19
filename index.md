@@ -229,7 +229,7 @@ As for if getting Google Snake is considered being lazy, I would like to note th
 
 This took probably more problem solving and critical thinking that just copying the snake code that you provided, but idk 🤷
 
-{% include game.html %}
+{% include game.html gamename="snake" %}
 
 ### Mr Brown Clicker
 
@@ -240,8 +240,8 @@ This took probably more problem solving and critical thinking that just copying 
 <script>
    const msg = "Score: ";
    const stationary = "images/map.jpg";
-   const img1 = "images/image.png";
-   const img2 = "images/mario_animation.png";
+   const img1 = "images/brown/1.jpg";
+   const img2 = "images/brown/2.jpg";
    const scoreElement = document.getElementById("score");
    const clickSound = document.getElementById("clickSound");
    var mrbrown = document.getElementById("mrbrown");
@@ -253,13 +253,10 @@ This took probably more problem solving and critical thinking that just copying 
    }
    function swapImg() {
      if (mrbrown.src.includes(stationary)) {
-       console.log("station -> img1")
        mrbrown.src = img1;
      } else if (mrbrown.src.includes(img1)) {
-       console.log("making it img2, from img1")
        mrbrown.src = img2;
      } else {
-       console.log("else")
        mrbrown.src = img1;
      }
    }

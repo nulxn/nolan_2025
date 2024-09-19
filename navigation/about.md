@@ -7,7 +7,7 @@ permalink: /about/
 **Nolan (kinda) knows how to code.**
 
 - Born: December 2008, San Diego
-- Lives in: 4S Ranch, San Diego
+- Lives in: San Diego
 - Age: <span id="age"></span> seconds
 
 Interests:
@@ -26,6 +26,8 @@ Things I have yet to do:
 - Figure out the theme switcher for Jekyll
 - Figure out Jekyll
 
+{% include game.html gamename="Dino_Bros" %}
+
 **MAP OF MY YEAR LONG TRIP:**
 <img src="../images/map.jpg" alt="tripmap">
 
@@ -42,7 +44,7 @@ function calculateAge() {
     const minutes = Math.floor((ageInSeconds % (60 * 60)) / 60);
     const seconds = ageInSeconds % 60;
 
-    return `${years}:${days}:${hours}:${minutes}:${seconds}`;
+    return `${years}:${days - (years * 365)}:${hours}:${minutes}:${seconds}`;
 }
 
 function updateAge() {
