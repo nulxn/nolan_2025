@@ -191,26 +191,28 @@ background-position: calc({{animations[0].col}} _ {{pixels}} _ -1px) calc({{anim
 
 </script>
 
+# Home
+
 [**BRAINROT**](skibidbiden)
 
 **MY FIRST DAYS PAGE IS ON THE BUTTONS**
 
-### Nolan's Notes
+## Nolan's Notes
 
 1. I didn't do all the hacks in order, so the links to them are scattered around.
 2. I imported my own theme from another Jekyll website (andrewhwanpark/dark-poole) and made changes to certain things, including the footer and navbar GIFs.
 3. Please don't judge my photography since I just imported all my photos from Lightroom.
 
-### HTML Hacks (Image + Table\[submenu\])
+## HTML Hacks (Image + Table\[submenu\])
 
 <img src="images/image.gif" alt="This is an image">
 
 | [Javascript Cell](posts/js) | [About](about) | [Python Hacks](posts/py-hacks) | [Attempted vs Accomplishment](posts/what) |
 
-### (Some) Javascript Hacks
+## (Some) Javascript Hacks
 
-[ITunes API + JS/HTML Output](posts/itunes)
-[Calculator](calculator)
+* [ITunes API + JS/HTML Output](posts/itunes)
+* [Calculator](calculator)
 
 I put my Javascript cell (my person object) in the table below.
 
@@ -228,6 +230,61 @@ As for if getting Google Snake is considered being lazy, I would like to note th
 This took probably more problem solving and critical thinking that just copying the snake code that you provided, but idk 🤷
 
 {% include game.html %}
+
+### Mr Brown Clicker
+
+<div>
+   <img id="mrbrown" alt="mrbown" width="500px" height="500px" src="images/map.jpg">
+   <p id="score">Score: Click to start!</p>
+</div>
+<script>
+   const msg = "Score: ";
+   const stationary = "images/map.jpg";
+   const img1 = "images/image.png";
+   const img2 = "images/mario_animation.png";
+   const scoreElement = document.getElementById("score");
+   const clickSound = document.getElementById("clickSound");
+   var mrbrown = document.getElementById("mrbrown");
+   let score = -1;
+   let lastClickTime = null;
+   function updateScore() {
+     score++;
+     scoreElement.textContent = msg + score;
+   }
+   function swapImg() {
+     if (mrbrown.src.includes(stationary)) {
+       console.log("station -> img1")
+       mrbrown.src = img1;
+     } else if (mrbrown.src.includes(img1)) {
+       console.log("making it img2, from img1")
+       mrbrown.src = img2;
+     } else {
+       console.log("else")
+       mrbrown.src = img1;
+     }
+   }
+  function playSound() {
+    const currentTime = Date.now();
+    lastClickTime = currentTime;
+    if (score > 0) {
+      if (lastClickTime) {
+        const timeDiff = currentTime - lastClickTime;
+        const playbackRate = Math.max(1, Math.min(3, 1000 / timeDiff)); 
+        clickSound.playbackRate = playbackRate;
+      } else {
+        clickSound.playbackRate = 1; 
+      }
+      clickSound.currentTime = 0; 
+      clickSound.play(); 
+      lastClickTime = currentTime; 
+     }
+   }
+   mrbrown.addEventListener("click", function () {
+     updateScore();
+     swapImg();
+     playSound();
+   })
+</script>
 
 <script>
 function swapTheStuff() {
