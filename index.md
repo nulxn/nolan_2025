@@ -238,8 +238,9 @@ This took probably more problem solving and critical thinking that just copying 
    <p id="score">Mr. Brownies Collected: Click to start!</p>
    <audio id="clickSound" src="images/brown/sound.mp3" preload="auto"></audio>
    <p><strong>Get more Mr. Brownies to buy more Mr Browns!</strong></p>
-   <p id="browns">Mr Browns: </p>
-   <button onclick="buyBrown()">By a new Mr. Brown</button>
+   <p id="browns">Mr Browns: 🤖</p>
+   <button id="buybuy" style="display: none;" onclick="buyBrown()">By a new Mr. Brown ($100)</button>
+   <audio id="buySound" src="images/brown/ka-ching"></audio>
 </div>
 <script>
    const msg = "Mr. Brownies Collected: ";
@@ -250,21 +251,30 @@ This took probably more problem solving and critical thinking that just copying 
    const img2 = "images/brown/2.jpg";
    const scoreElement = document.getElementById("score");
    const clickSound = document.getElementById("clickSound");
+   const buySound = document.getElementById("buySound");
    var mrbrown = document.getElementById("mrbrown");
    let score = -1;
    let lastClickTime = null;
    let multiplier = 1;
    function buyBrown() {
+     buySound.play();
      var robs = "";
      multiplier++;
      for (let i = 0; i < multiplier; i++) {
        robs += rob;
      }
      document.getElementById("browns").textContent = msg2 + robs;
+     score -= 100;
+     updateScore();
+     if (score < 100) {
+      document.getElementById("buybuy").style.display = "none";
+     }
    }
    function updateScore() {
-     score += multiplier;
      scoreElement.textContent = msg + score;
+     if (score >= 100) {
+      document.getElementById("buybuy").style.display = "block";
+     }
    }
    function swapImg() {
      if (mrbrown.src.includes(stationary)) {
@@ -292,6 +302,7 @@ This took probably more problem solving and critical thinking that just copying 
      }
    }
    mrbrown.addEventListener("click", function () {
+     score += multiplier;
      updateScore();
      swapImg();
      playSound();
