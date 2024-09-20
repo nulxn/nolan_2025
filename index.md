@@ -214,7 +214,7 @@ background-position: calc({{animations[0].col}} _ {{pixels}} _ -1px) calc({{anim
 - [ITunes API + JS/HTML Output](posts/itunes)
 - [Calculator](calculator)
 
-I put my Javascript cell (my person object) in the table below.
+I put my Javascript cell (my person object) in the table ove in the HTML Hacks section.
 
 <div>
   <button style='color:white;' onclick="swapTheStuff()">swap the links</button>
@@ -236,10 +236,15 @@ This took probably more problem solving and critical thinking that just copying 
 <div>
    <img id="mrbrown" alt="mrbown" width="500px" height="500px" src="images/brown/stat.jpg">
    <p id="score">Mr. Brownies Collected: Click to start!</p>
-    <audio id="clickSound" src="images/brown/sound.mp3" preload="auto"></audio>
+   <audio id="clickSound" src="images/brown/sound.mp3" preload="auto"></audio>
+   <p><strong>Get more Mr. Brownies to buy more Mr Browns!</strong></p>
+   <p id="browns">Mr Browns: </p>
+   <button onclick="buyBrown()">By a new Mr. Brown</button>
 </div>
 <script>
    const msg = "Mr. Brownies Collected: ";
+   const msg2 = "Mr Browns: ";
+   const rob = "🤖";
    const stationary = "images/brown/stat.jpg";
    const img1 = "images/brown/1.jpg";
    const img2 = "images/brown/2.jpg";
@@ -248,8 +253,17 @@ This took probably more problem solving and critical thinking that just copying 
    var mrbrown = document.getElementById("mrbrown");
    let score = -1;
    let lastClickTime = null;
+   let multiplier = 1;
+   function buyBrown() {
+     var robs = "";
+     multiplier++;
+     for (let i = 0; i < multiplier; i++) {
+       robs += rob;
+     }
+     document.getElementById("browns").textContent = msg2 + robs;
+   }
    function updateScore() {
-     score++;
+     score += multiplier;
      scoreElement.textContent = msg + score;
    }
    function swapImg() {
