@@ -240,7 +240,7 @@ This took probably more problem solving and critical thinking that just copying 
    <p><strong>Get more Mr. Brownies to buy more Mr Browns!</strong></p>
    <p id="browns">Mr Browns: 🤖</p>
    <button id="buybuy" style="display: none;" onclick="buyBrown()">By a new Mr. Brown ($100)</button>
-   <audio id="buySound" src="images/brown/ka-ching"></audio>
+   <audio id="buySound" src="images/brown/ka-ching" preload="auto"></audio>
 </div>
 <script>
    const msg = "Mr. Brownies Collected: ";
