@@ -57,7 +57,7 @@ posts.reverse().forEach((post) => {
 });
 ```
 
-## dynamic data (RESTFUL API)
+## dynamic data (custom RESTFUL API)
 
 i created the ability to store images and assign them to a post
 
@@ -120,3 +120,7 @@ def static_uploaded_file(filename):
     <source src="/nolan_2025/videos/images.webm" type="video/webm">
     dumb browser no video support
 </video>
+
+### postman photo
+
+<img src="/nolan_2025/images/image_post.png" />
