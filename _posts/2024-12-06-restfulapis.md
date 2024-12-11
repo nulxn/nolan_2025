@@ -8,6 +8,8 @@ comments: True
 
 ---
 
+[**link to python flask notebook**](/nolan_2025/2024/12/02/python-flask_in_jupyter_IPYNB_2_.html)
+
 ## step 2 (nolan.py)
 
 this my my personal /api file that routes to /api/nolan and returns information about me.
