@@ -85,8 +85,16 @@ permalink: /snake/
   <div class="container bg-secondary" style="text-align: center">
     <!-- Main Menu -->
     <img src="/nolan_2025/images/cbrown/stat.jpg" alt="Saint Jeff" id="santa" />
-    <audio id="clickSound" src="/nolan_2025/images/brown/sound.mp3" preload="auto"></audio>
-    <audio id="bgMusic" src="/nolan_2025/images/cbrown/theme.mp3" preload="auto" loop></audio>
+    <audio
+      id="clickSound"
+      src="/nolan_2025/images/brown/sound.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="bgMusic"
+      src="/nolan_2025/images/cbrown/theme.mp3"
+      preload="auto"
+    ></audio>
 
     <div id="menu" class="py-4 text-light">
       <p>
@@ -173,6 +181,7 @@ permalink: /snake/
 
     const brownImg = document.getElementById("santa");
     const clickSound = document.getElementById("clickSound");
+    const bgMusic = document.getElementById("bgMusic");
 
     // Game Control
     const BLOCK = 10; // size of block rendering
@@ -219,12 +228,15 @@ permalink: /snake/
       // HTML Events to Functions
       button_new_game.onclick = function () {
         newGame();
+        bgMusic.play();
       };
       button_new_game1.onclick = function () {
         newGame();
+        bgMusic.play();
       };
       button_new_game2.onclick = function () {
         newGame();
+        bgMusic.play();
       };
       button_setting_menu.onclick = function () {
         showScreen(SCREEN_SETTING);
@@ -267,6 +279,7 @@ permalink: /snake/
     /* Snake is on the Go (Driver Function)  */
     /////////////////////////////////////////////////////////////
     let mainLoop = function () {
+      document.body.style.overflow = "hidden";
       let _x = snake[0].x;
       let _y = snake[0].y;
       snake_dir = snake_next_dir; // read async event key
