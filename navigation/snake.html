@@ -84,6 +84,9 @@ permalink: /snake/
   </header>
   <div class="container bg-secondary" style="text-align: center">
     <!-- Main Menu -->
+    <img src="/nolan_2025/images/brown/stat.jpg" alt="Saint Jeff" id="santa" />
+    <audio id="clickSound" src="images/brown/sound.mp3" preload="auto"></audio>
+
     <div id="menu" class="py-4 text-light">
       <p>
         Welcome to Snake, press
@@ -166,6 +169,10 @@ permalink: /snake/
     const button_new_game2 = document.getElementById("new_game2");
     const button_setting_menu = document.getElementById("setting_menu");
     const button_setting_menu1 = document.getElementById("setting_menu1");
+
+    const brownImg = document.getElementById("santa");
+    const clickSound = document.getElementById("clickSound");
+
     // Game Control
     const BLOCK = 10; // size of block rendering
     let SCREEN = SCREEN_MENU;
@@ -322,6 +329,8 @@ permalink: /snake/
         altScore(++score);
         addFood();
         activeDot(food.x, food.y, 1);
+        brownImg.src = "/nolan_2025/images/brown/2.jpg";
+        clickSound.play();
       }
       // Repaint canvas
       ctx.beginPath();
