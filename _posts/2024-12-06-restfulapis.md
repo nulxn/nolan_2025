@@ -5,7 +5,6 @@ title: RESTUL APIs
 description: This is for the assignment and notes
 permalink: /posts/api
 comments: True
-
 ---
 
 [**link to python flask notebook**](/nolan_2025/2024/12/02/python-flask_in_jupyter_IPYNB_2_.html)
