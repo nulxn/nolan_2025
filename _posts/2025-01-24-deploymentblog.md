@@ -182,10 +182,10 @@ docker-compose logs
 
 Below is an overview of Neptune's architecture:
 
-![System Architecture](/neptune_frontend/images/image.png)
+![System Architecture](/nolan_2025/images/image.png)
 
 Here is an image of the chatroom in depth, since it uses WebSocket.
-![Chatroom](/neptune_frontend/images/chatroom.png)
+![Chatroom](/nolan_2025/images/chatroom.png)
 
 ---
 
