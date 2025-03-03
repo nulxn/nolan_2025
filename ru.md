@@ -16,6 +16,7 @@
 
 **about page issue & steps:** https://github.com/DNHS-Neptune/neptune_frontend/issues/12
 
+### Recent (good stuff)
 **kanban board:** https://github.com/users/nulxn/projects/2
 - [astronet image burndown](https://github.com/users/nulxn/projects/2/views/1?pane=issue&itemId=90060347&issue=DNHS-Neptune%7Cneptune_frontend%7C18)
 - [flashcards (new feature) burndown](https://github.com/users/nulxn/projects/2/views/1?pane=issue&itemId=100053735&issue=nulxn%7Cathletic-bot%7C4)
