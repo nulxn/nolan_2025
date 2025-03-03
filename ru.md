@@ -23,10 +23,6 @@
 
 ## CPT & Project
 
-Thanks for sharing your code! Now, I'll go through the AP Computer Science Principles Create Task requirements and cite the relevant parts of your code, explaining how they fulfill each requirement.
-
----
-
 ### Program Purpose and Function
 - **Input:**  
   - The user provides input through the text fields:
