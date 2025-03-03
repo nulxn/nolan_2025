@@ -9,8 +9,11 @@
 
 ## Links
 **old feature blog:** https://nulxn.github.io/nolan_2025/posts/project
+
 **astronet self-grade issue:** https://github.com/DNHS-Neptune/neptune_frontend/issues/26
+
 **neptune user story issue & burndown list:** https://github.com/DNHS-Neptune/neptune_frontend/issues/7
+
 **about page issue & steps:** https://github.com/DNHS-Neptune/neptune_frontend/issues/12
 
 **kanban board:** https://github.com/users/nulxn/projects/2
